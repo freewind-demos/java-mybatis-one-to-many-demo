@@ -6,8 +6,8 @@ spring:
   datasource:
     # h2数据库驱动
     driver-class-name: org.h2.Driver
-    # h2数据库链接地址
-    url: jdbc:h2:mem:demo
+    # h2数据库链接地址 .表示运行目录，如果是在IDE中启动，表示项目根目录
+    url: jdbc:h2:file:./db/demo;TRACE_LEVEL_FILE=3
     password: sa
     username: sa
     schema: classpath:db/schema.sql

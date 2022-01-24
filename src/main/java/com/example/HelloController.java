@@ -21,8 +21,8 @@ public class HelloController {
     }
 
     @GetMapping("/{id}")
-    public String getMessage(@PathVariable String id) {
-        return this.messageService.findById(id).text;
+    public Message getMessage(@PathVariable String id) {
+        return this.messageService.findById(id);
     }
 
     @PostMapping("")
